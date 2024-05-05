@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdaPaaVi</title>
+    <style>
+        body {
+        color:white;
+            background-color:black;
+            color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Table Styles */
+        table {
+        color:white;
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color:skyblue;
+        }
+
+        tr:hover {
+            background-color:skyblue;
+        }
+
+        /* Scrollable table */
+        .table-container {
+            height: 600px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Form Styles */
+        input[type="text"] {
+            color: white;
+            padding: 8px;
+            border-radius: 15px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        input::placeholder {
+            color: black;
+        }
+
+        input:hover {
+            transform: scale(1.1);
+        }
+
+        button {
+            padding: 8px 20px;
+            border-radius: 10px;
+            background-color: transparent;
+            border: 1px solid black;
+            color: white;
+            cursor: pointer;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        button:hover {
+            color: red;
+            background-color: #ddd;
+        }
+        th, td {
+        border: 2px dashed white;
+        border-radius: 10px;
+        }
+        table{
+        border:none;
+        border-image: url("https://www.w3schools.com/css/border.png") 30 round;
+        
+        }
+
+       
+
+        /* Responsive Styles */
+        @media only screen and (max-width: 600px) {
+            input[type="text"], button {
+                font-size: 14px;
+            }
+        }
+        h1{
+        background:linear-gradient(74deg, rgb(36, 133, 244), rgb(160, 114, 203), rgb(217, 60, 121));
+        color:transparent;
+        background-clip:text;
+        
+        }
+    </style>
+</head>
+<body><center>
+    <h5 style="color:white;margin:0px;">microintel`s</h5>
+    <h1 style="margin:0px;">AdaPaaVi</h1></center><br><br>
+    <input type="text" id="searchInput" placeholder="Search..." oninput="searchTable()" />
+    <div class="table-container">
+        <table border="1" id="dataTable">
+            <!-- Table content -->
+            <!--
+            
+            <tr>
+            <td class='incomeColumn'>0000</td>
+            <td class='dateColumn'>0000</td>
+            <td></td>
+            <td><h4></h4></td>
+            <td></td>
+            </tr>
+            
+            
+            -->
+            <tr>
+            <td class='incomeColumn'>2000</td>
+            <td class='dateColumn'>2/2/24</td>
+            <td>Dad</td>
+            <td><h4>250 , 9/2/24 , Recharge pavan</h4><h4>600 , Present  , Dad</h4><h4>200+100 , 10/2/24 , 2week launch , petrol </h4><h4>400 , 10/2/24 , 6th sem exam fee </h4><h4>100 , 6/2/24 , Train fine</h4><h4>350 , 19/2/24 , Shared VIJI</h4></td><td>0</td>
+            </tr>
+            <tr>
+            <td class='incomeColumn'>800</td><td class='dateColumn'>20/1/24</td><td>Dad</td><td><h4>800 , Present , Tata, domestic </h4></td><td>0</td></tr><tr><td class='incomeColumn'>2000</td><td class='dateColumn'>3/1/24</td><td>Dad</td><td><h4>1000 , Present  , Tata, domestic </h4><h4>500 , Present  , Viji Infosys tourism </h4><h4>250 , Present  , Recharge pavan</h4><h4>60+100 , Present  , Viji cutting,home</h4><h4>100 , 19/2/24 , Viji aadhar update </h4></td><td>0</td></tr><tr><td class='incomeColumn'>2000</td><td class='dateColumn'>1/2/24</td><td>Dad</td><td><h4>500 , After 5days , Dad</h4><h4>1500 , After 7days , Viji phone</h4></td><td>0</td></tr><tr><td class='incomeColumn'>1000</td><td class='dateColumn'>10/2/24</td><td>Dad</td><td><h4>500 , Present  , Try</h4><h4>600 , 13/2/24 , Tata</h4><h4>100 , 13/2/24 , Pavan Mysore veg</h4><h4>300 , 19/2/24 , Shared VIJI</h4></td><td>0</td></tr><tr><td class='incomeColumn'>100</td><td class='dateColumn'>10/2/24</td><td>Pranav</td><td><h4>100 , Present  , Pranav</h4></td><td>0</td></tr><tr><td class='incomeColumn'>1000</td><td class='dateColumn'>20/2/24</td><td>Dad</td><td><h4>1000 , Present  , Viji fam</h4><h4>100 , Present  , Cycle repair , viji fam bal 900</h4><h4>200 , 28/2/24 , Pavan temper glass 150, month1 report 50</h4><h4>200 , 20/2/24 , Dad phone recharge </h4><h4>50 , 3,4/3/24 , Viji </h4><h4>200 , 24/3/24 , Dad recharge </h4><h4>200 , 25/3/2024 , Pavan Mysore veg</h4><h4>50 , 30/3/24 , Bang 2nd ray bike</h4></td><td>0</td></tr><tr><td class='incomeColumn'>2000</td><td class='dateColumn'>26/2/24</td><td>Dad sam</td><td><h4>1000 , 26/2/24 , Dad</h4><h4>1000 , Present  , Viji 500,dad 300,pavan Mysore veg 200 1wk</h4></td><td>0</td></tr><tr><td class='incomeColumn'>1000</td><td class='dateColumn'>3/3/24</td><td>Dad sam</td><td><h4>250,200 , 8/3/24 , Viji recharge , pavan Mysore veg</h4><h4>200 , 2/4/24 , Pavan Mysore veg</h4><h4>350 , 30/3/24 , Bang 2nd ray bike</h4></td><td>0</td></tr><tr><td class='incomeColumn'>2500</td><td class='dateColumn'>12/3/24</td><td>Dad</td><td><h4>200 , 12/4/24 , Pavan Mysore veg</h4><h4>200 , 18/3/24 , Pavan Mysore veg</h4><h4>1000 , 27/3/24 , Dad new phone </h4><h4>1100 , 30/3/24 , Bang 2nd ray bike</h4></td><td>0</td></tr><tr><td class='incomeColumn'>3000</td><td class='dateColumn'>27/3/24</td><td>Dad sam</td><td><h4>3000 , 30/3/24 , Bang 2nd ray bike</h4></td><td>0</td></tr><tr><td class='incomeColumn'>2000</td><td class='dateColumn'>3/4/24</td><td>Dad sam</td><td><h4>1750 , 3/4/24 , 500-> tata__ 1000-> vandi 250-> mys-cmnr 1m pass</h4><h4>250 , 3/4/24 , Pavan mobile recharge </h4></td><td>0</td></tr><tr><td class='incomeColumn'>500</td><td class='dateColumn'>8/4/24</td><td>Dad sam</td><td><h4>200 , 8,9/4/24 , Pavan Mysore veg</h4><h4>300 , 9/4/24 , Viji</h4></td><td>0</td></tr>
+            
+            <tr>
+            <td class='incomeColumn'>8000</td>
+            <td class='dateColumn'>10/3/24</td>
+            <td>Dip 3rd sclshp</td>
+            <td><h4>3/5/24 dip 6th sem final report__500rs<br>may/4/24 6th-7th stdy crtfict by anand bro ₹__100₹__₹<br>may/6/24 bang-cmnr,cmnr-bang ₹__₹200__₹<br>may/5/24 viji_Ambika atthe_pavan egg pups ₹__40__₹</h4></td>
+            <td>7160</td>
+            </tr>
+            
+            <tr>
+            <td class='incomeColumn'>5000</td>
+            <td class='dateColumn'>16/4/24</td>
+            <td>Dad sam</td>
+            <td><h4>4800+200 vandi+viji</h4></td>
+            <td>0</td>
+            </tr>
+            
+            <tr>
+            <td class='incomeColumn'>15000</td>
+            <td class='dateColumn'>8/4/24</td>
+            <td>march secsal 24</td>
+            <td><h4>5000_vandi<br>4300_feb24ALLEXPENCE<br>2500_interFEE<br>2000_Smamaatthe<br>200_23/4/24 _mysore veg<br>200_24/4/24_from cmnr to ksr bang<br>UTS RECHARGE 100<br>Charan pavan 30/4/24 train+food _200<br>may 3 recharge pavan 240<br>3/5/24 bang-cmnr ,cmnr-bang+food__260</h4></td>
+            <td>0</td>
+            </tr>
+            
+            <tr>
+            <td class='incomeColumn'>2000</td>
+            <td class='dateColumn'>23/4/24</td>
+            <td>Dad Sam</td>
+            <td><h4><br>vandi 2000<br>still 4000 want<br></h4></td>
+            <td>0</td>
+            </tr>
+            
+            <tr>
+            <td class='incomeColumn'>1500</td>
+            <td class='dateColumn'>2/5/24</td>
+            <td>Dad Sam</td>
+            <td><h4>3/5/24 to Dad__500rs</h4></td>
+            <td>1000</td>
+            </tr>
+            
+            <!--
+            
+            <tr>
+            <td class='incomeColumn'>0000</td>
+            <td class='dateColumn'>0000</td>
+            <td></td>
+            <td><h4></h4></td>
+            <td></td>
+            </tr>
+            
+            
+            -->
+        </table>
+    </div>
+    
+    <script>
+        function searchTable() {
+            let searchText = document.getElementById("searchInput").value.trim().toUpperCase();
+            let table = document.getElementById("dataTable");
+            let rows = table.getElementsByTagName("tr");
+
+            for (let row of rows) {
+                let cells = row.getElementsByTagName("td");
+                let rowText = '';
+
+                for (let cell of cells) {
+                    rowText += cell.textContent.trim().toUpperCase() + ' ';
+                }
+
+                if (rowText.includes(searchText)) {
+                    row.style.display = "";
+                } else {
+                    row.style.display = "none";
+                }
+            }
+        }
+
+    </script>
+    
+<center>
+<h5 style="color:white;margin:0px;">developed by</h5>
+<h1 style="margin:0px;">Microintel</h1></center>
+</body>
+</html>
